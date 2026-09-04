@@ -26,17 +26,11 @@ If you find the work useful and want to help with practical costs such as hostin
 
 - [Become a monthly supporter via Stripe](https://buy.stripe.com/fZu00larQfqd8pX4XX2ZO02)
 
-## Other local sources
+## More local information
 
-Southall Stories is only one part of the local information ecosystem. There are useful independent, community and official sources elsewhere too.
+For community sites, local reporting, official sources, campaigns and archived Southall material, see [Local links & resources →](/resources/).
 
-The old Subscribe page carried a large directory of those links. Rather than lose that useful civic reference material, it should be moved to a dedicated links/resources page where it can be maintained properly, instead of making the Subscribe page do two unrelated jobs.
-
-For now, you can also explore:
-
-- [Ealing Civic Commons](https://ealing.civiccommons.co.uk/)
-- [Southall Stories Campaigns](/campaigns/)
-- [Full archive](/archive/)
+You can also explore [Ealing Civic Commons](https://ealing.civiccommons.co.uk/) or browse the [full Southall Stories archive](/archive/).
 
 ## Stay in touch
 
