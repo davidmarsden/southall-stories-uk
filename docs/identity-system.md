@@ -29,9 +29,18 @@ As read by Ealing Council’s Press Office
 - Real Southall photography is preferred to generic civic/news imagery.
 - Avoid polishing the identity into a generic newspaper or corporate-news look.
 
+## Final uploaded Micro.blog assets
+
+- Favicon / site icon: `https://southallstories.uk/uploads/2026/file-0000000040348243b574198504e00d0b.png`
+- Default social share card (1200×630 ratio): `https://southallstories.uk/uploads/2026/file-00000000de1082109c88e87b08b22d35.png`
+- Square social/profile treatment: `https://southallstories.uk/uploads/2026/file-00000000fdf4821088b414e759d8bfc6.png`
+- Horizontal/editorial masthead: `https://southallstories.uk/uploads/2026/file-00000000446482109b153e8780a9483c.png`
+- Identity board/reference sheet: `https://southallstories.uk/uploads/2026/file-00000000dc648243a4f8e5b7ae1441e1.png`
+- Editorial poster / share variation: `https://southallstories.uk/uploads/2026/file-00000000525c8243a525c28259f665de.png`
+
 ## Social and metadata
 
-The default social-preview image is the original Gasworks “No unauthorised access” image. Posts with their own lead image override that default.
+The default Open Graph/Twitter image is the branded Gasworks card above. Posts with their own lead image override that default.
 
 Default metadata language:
 
