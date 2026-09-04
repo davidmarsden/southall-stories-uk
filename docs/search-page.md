@@ -2,7 +2,9 @@
 
 Search the Southall Stories archive for people, places, organisations, developments, campaigns and issues covered over the years.
 
-The search box above uses Micro.blog’s site index. It is useful for finding words and names that may appear deep inside older reporting, but it is not a substitute for the organised archive and category pages.
+The search box above is provided by the Micro.blog Search Space plugin. It searches Micro.blog’s site index, including posts and — with the current plugin settings — replies and transcripts.
+
+It is useful for finding words and names that may appear deep inside older reporting, but it is not a substitute for the organised archive and category pages.
 
 ## Good things to search for
 
