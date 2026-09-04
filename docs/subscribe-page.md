@@ -18,19 +18,19 @@ If you find the work useful and want to help with practical costs such as hostin
 
 ### One-off support
 
-- [PayPal](https://www.paypal.com/)
-- [Monzo](https://monzo.com/)
-- [Stripe](https://stripe.com/)
+- [Donate with Stripe](https://buy.stripe.com/fZueVf9nM1znbC90HH2ZO01)
+- [PayPal](https://www.paypal.me/gdmarsden)
+- [Monzo](https://monzo.me/davidmarsden42?h=0JQZ0n)
 
 ### Regular support
 
-- [Monthly support via Stripe](https://stripe.com/)
+- [Become a monthly supporter via Stripe](https://buy.stripe.com/fZu00larQfqd8pX4XX2ZO02)
 
 ## Other local sources
 
 Southall Stories is only one part of the local information ecosystem. There are useful independent, community and official sources elsewhere too.
 
-Rather than burying a large directory inside the Subscribe page, those links should be kept separately as part of the site’s civic reference material.
+The old Subscribe page carried a large directory of those links. Rather than lose that useful civic reference material, it should be moved to a dedicated links/resources page where it can be maintained properly, instead of making the Subscribe page do two unrelated jobs.
 
 For now, you can also explore:
 
