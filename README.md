@@ -21,18 +21,20 @@ The initial theme source was exported from Micro.blog on 4 September 2026. The r
 - `layouts/list.archivehtml.html` / `layouts/_default/list.archivehtml.html` — archive
 - `layouts/post/single.html` — article pages
 - `layouts/partials/` — masthead, navigation and supporting components
+- `layouts/partials/head.html` — metadata, favicon and social-preview defaults
 - `static/css/southall-refresh.css` — homepage/article refresh styles
 - `static/css/southall-browse.css` — archive/category styles plus cross-site polish
 - `static/css/southall-pages.css` — supporting page styles
+- `static/css/southall-identity.css` — final identity-system refinements
 - `static/custom.css` — older Southall Stories overrides still in use
 - `static/css/style.css` — inherited theme stylesheet
 - `_variables-light.scss` / `_variables-dark.scss` — theme colour/type variables
-- `config.json` — exported Micro.blog/Hugo configuration snapshot
 - `docs/about-page.md` — canonical refreshed About page copy for Micro.blog
 - `docs/campaigns-page.md` — canonical Campaigns/resources copy
 - `docs/search-page.md` — Search Space greeting copy
 - `docs/subscribe-page.md` — refreshed Subscribe copy
 - `docs/local-links-page.md` — Local links & resources page copy
+- `docs/identity-system.md` — agreed identity rules and usage notes
 
 ## Workflow
 
@@ -43,7 +45,7 @@ The initial theme source was exported from Micro.blog on 4 September 2026. The r
 
 ## 2026 redesign status
 
-The refresh is moving Southall Stories from a chronological-blog presentation toward a stronger independent local-publication identity.
+The refresh has moved Southall Stories from a chronological-blog presentation toward a stronger independent local-publication identity.
 
 Completed work includes:
 
@@ -56,6 +58,20 @@ Completed work includes:
 - `Read Me` retired in favour of About, with `/read-me/` preserved via Micro.blog redirect.
 - Global site credits for Micro.blog, Search Space by Sven Dahlstrand and the Microwave theme by Josh Dawson.
 - Second-pass polish to sidebar rhythm, homepage lead balance, article heading spacing, conversation form styling, archive tag noise, mobile topic control and image-less category cards.
+- Final identity system agreed and wired into the theme.
+
+## Identity system
+
+- Masthead: yellow/black **SOUTHALL STORIES**.
+- Descriptor: **Independent local journalism**.
+- Main strapline: **Recording what happens to Southall — and who is responsible.**
+- Short line: **Local people. Local questions.**
+- Character line: **Digging the dirt, unearthing the truth.**
+- Easter egg: **As read by Ealing Council’s Press Office**.
+- Favicon/site icon: original Southall Gasworks **No unauthorised access** image.
+- Default social-preview image: the same original Gasworks sign image; article pages override it with their own lead image where available.
+- No `SS` monogram.
+- Old quill motif retired from the core identity.
 
 ## Remaining polish backlog
 
@@ -66,7 +82,6 @@ Keep these for later review rather than changing things just for the sake of it:
 - Review About copy after it has been live for a while.
 - Check category-card image crops on a wider sample of older posts and adjust individual source images only where necessary.
 - Revisit the mobile/tablet topic drawer after using the site on phones for a while.
-- Develop the fuller Southall Stories identity system: compact mark, favicon, social card, horizontal wordmark and possible simplification/removal of the old quill motif.
 
 ## Redesign direction
 
