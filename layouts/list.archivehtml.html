@@ -38,7 +38,7 @@
         <h3><a href="{{ .RelPermalink }}">{{ if .Title }}{{ .Title }}{{ else }}Untitled post{{ end }}</a></h3>
         {{ with .Params.categories }}
           <p class="ss-archive-cats">
-            {{ range $i, $cat := . }}{{ if $i }} · {{ end }}<a href="{{ printf "/categories/%s/" ($cat | urlize) }}">{{ $cat }}</a>{{ end }}
+            {{ range $i, $cat := first 3 . }}{{ if $i }} · {{ end }}<a href="{{ printf "/categories/%s/" ($cat | urlize) }}">{{ $cat }}</a>{{ end }}{{ if gt (len .) 3 }} <span class="ss-archive-more">+{{ sub (len .) 3 }} more</span>{{ end }}
           </p>
         {{ end }}
       </div>
