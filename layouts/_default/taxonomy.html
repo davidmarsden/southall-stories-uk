@@ -15,9 +15,13 @@
   <section class="ss-browse-grid" aria-label="Stories in {{ .Title }}">
     {{ range $pages }}
       {{ $page := . }}
-      <article class="ss-browse-card">
-        {{ with .Params.images }}
-          {{ if gt (len .) 0 }}
+      {{ $hasImage := false }}
+      {{ with .Params.images }}
+        {{ if gt (len .) 0 }}{{ $hasImage = true }}{{ end }}
+      {{ end }}
+      <article class="ss-browse-card{{ if not $hasImage }} ss-browse-card--text{{ end }}">
+        {{ if $hasImage }}
+          {{ with .Params.images }}
             <a class="ss-browse-image" href="{{ $page.RelPermalink }}" aria-label="Read {{ $page.Title }}">
               <img src="{{ index . 0 }}" alt="" loading="lazy">
             </a>
