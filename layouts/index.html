@@ -42,9 +42,10 @@
     </div>
     <div class="ss-story-grid">
       {{ range first 4 (after 1 $posts) }}
+      {{ $story := . }}
       <article class="ss-story-card">
         {{ with .Params.images }}
-        <a class="ss-story-image" href="{{ $.Permalink }}"><img src="{{ index . 0 }}" alt="" loading="lazy"></a>
+        <a class="ss-story-image" href="{{ $story.Permalink }}"><img src="{{ index . 0 }}" alt="" loading="lazy"></a>
         {{ end }}
         <div class="ss-story-card-copy">
           {{ with .Params.categories }}<p class="ss-story-category">{{ index . 0 }}</p>{{ end }}
