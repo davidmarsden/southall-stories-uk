@@ -67,12 +67,6 @@ The campaign around the Tudor Rose in Southall remains useful as a record of com
 
 - [Hands Off Tudor Rose campaign — Visit Southall archive](https://www.visitsouthall.co.uk/News/NewsDetails.php?recordID=1101)
 
-### Warren Farm
-
-Campaigning around Warren Farm has run through several phases and proposals. The dedicated campaign site remains a useful archive and current reference point.
-
-- [Warren Farm Nature Reserve](https://www.warrenfarmnaturereserve.co.uk/)
-
 ## Other campaign and civic records
 
 These links are retained because they document community activity, even where Southall Stories did not publish a dedicated report on them.
@@ -82,7 +76,6 @@ These links are retained because they document community activity, even where So
 - [Southall Residents Alliance](https://southallresidentsalliance.co.uk/)
 - [Stop The Towers](https://stopthetowers.info/)
 - [Stop The Towers — directory of related campaigns](https://stopthetowers.info/other-campaigns)
-- [Warren Farm Nature Reserve](https://www.warrenfarmnaturereserve.co.uk/)
 
 ### Council-linked initiatives and participation
 
