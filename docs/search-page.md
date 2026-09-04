@@ -2,7 +2,7 @@
 
 Search the Southall Stories archive for people, places, organisations, developments, campaigns and issues covered over the years.
 
-The search box above is provided by the Micro.blog Search Space plugin. It searches Micro.blog’s site index, including posts and — with the current plugin settings — replies and transcripts.
+The search box above searches the site’s index, including posts and — with the current settings — replies and transcripts.
 
 It is useful for finding words and names that may appear deep inside older reporting, but it is not a substitute for the organised archive and category pages.
 
@@ -28,4 +28,4 @@ If you are looking for a body of work rather than one particular reference, thes
 - [Campaigns →](/campaigns/)
 - [Full archive →](/archive/)
 
-Search results reflect what Micro.blog has indexed from the site. If you know something exists but cannot find it here, the [full archive](/archive/) is the best fallback.
+Search results reflect what the site index contains. If you know something exists but cannot find it here, the [full archive](/archive/) is the best fallback.
