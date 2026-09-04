@@ -5,6 +5,7 @@
       {{ if eq .Title "About" }}About this work
       {{ else if eq .Title "Read Me" }}Start here
       {{ else if eq .Title "Campaigns" }}Campaigns &amp; public interest
+      {{ else if or (eq .Title "Search") (eq .Title "Search Space") }}Find the reporting
       {{ else if eq .Title "Subscribe" }}Stay with the story
       {{ else }}Southall Stories{{ end }}
     </p>
