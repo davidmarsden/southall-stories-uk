@@ -28,6 +28,7 @@ The initial theme source was exported from Micro.blog on 4 September 2026. The r
 - `static/css/style.css` — inherited theme stylesheet
 - `_variables-light.scss` / `_variables-dark.scss` — theme colour/type variables
 - `config.json` — exported Micro.blog/Hugo configuration snapshot
+- `docs/about-page.md` — canonical refreshed About page copy for Micro.blog
 
 ## Workflow
 
@@ -47,7 +48,9 @@ Completed first-pass work:
 - Publication-style article pages with improved typography, metadata, sharing, support and conversation routes.
 - Category pages with visual story cards.
 - Year-by-year archive with jump navigation and category links.
-- First-pass styling for supporting publication pages such as About and Read Me.
+- First-pass styling for supporting publication pages.
+- Decision to retire the overlapping `Read Me` page and consolidate trust/start-here information into a stronger `About Southall Stories` page. Preserve `/read-me/` with a Micro.blog redirect to `/about/`.
+- Refreshed About page copy stored in `docs/about-page.md`.
 
 ## Polish backlog
 
@@ -61,6 +64,7 @@ Keep these for later refinement rather than interrupting the structural redesign
 - Continue softening the article left rail on very long reads if it still feels visually dominant.
 - Continue styling the Micro.blog conversation form so it feels more native to the publication design.
 - Review mobile/tablet behaviour of the floating topic/category control.
+- Review About page copy after it has been live for a while, including the final preferred contact address.
 - Develop the fuller Southall Stories identity system later: compact mark, favicon, social card, horizontal wordmark and possible simplification/removal of the old quill motif.
 
 ## Redesign direction
