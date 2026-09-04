@@ -18,7 +18,9 @@ Southall Stories is interested in patterns as much as individual announcements. 
 
 Stories may be updated when new evidence emerges. Significant corrections should be made clearly and transparently.
 
-People and organisations criticised in the reporting should be given a fair opportunity to respond where practical and relevant. Responses received after publication may be added to the story.
+Every published story has a public reply route. Corrections, clarifications, objections and substantive responses are welcome and may be added to the reporting where relevant.
+
+For stories involving Ealing Council, publication summaries may also be sent to the council press office before publication where that is useful and proportionate.
 
 ## Independence and funding
 
@@ -40,7 +42,7 @@ The two projects are separate but deliberately connected.
 
 Corrections, tips, documents, right-of-reply responses and story leads are welcome.
 
-- Email: [add preferred Southall Stories email address]
+- Email: southall@davidmarsden.info
 - Personal website: https://davidmarsden.info/
 - Ealing Civic Commons: https://ealing.civiccommons.co.uk/
 
