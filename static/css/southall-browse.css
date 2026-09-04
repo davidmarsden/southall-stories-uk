@@ -49,9 +49,18 @@
   border: 1px solid rgba(127, 127, 127, 0.3);
 }
 
+.ss-browse-card--text {
+  grid-template-columns: 1fr;
+}
+
+.ss-browse-card--text .ss-browse-card-copy {
+  padding: 1.25rem;
+}
+
 .ss-browse-image {
   display: block;
   overflow: hidden;
+  min-height: 12rem;
   background: rgba(127, 127, 127, 0.08);
   line-height: 0;
 }
@@ -61,6 +70,7 @@
   height: 100%;
   margin: 0;
   object-fit: cover;
+  object-position: center;
 }
 
 .ss-browse-card-copy {
@@ -173,6 +183,12 @@
   opacity: 0.62;
 }
 
+.ss-archive-more {
+  margin-left: 0.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 /* Article polish after the first live pass */
 .ss-article-body h2 {
   margin-top: 3rem;
@@ -184,7 +200,28 @@
   margin-bottom: 0.8rem;
 }
 
-/* The left rail should support the article, not compete with it. */
+/* Give the left rail a calmer rhythm across the publication. */
+#sidebar .ss-brand {
+  padding-bottom: 0.35rem !important;
+}
+
+#sidebar .ss-brand-deck {
+  max-width: 12.5rem;
+}
+
+#sidebar .ss-nav {
+  margin-top: 0.8rem;
+}
+
+#sidebar .ss-nav li {
+  margin-bottom: 0.85rem !important;
+}
+
+#sidebar .ss-nav a {
+  line-height: 1.25;
+}
+
+/* On long reads, the rail should support the article rather than compete with it. */
 body:has(.ss-article) #sidebar .ss-nav a {
   font-size: 0.9rem;
   opacity: 0.82;
@@ -195,6 +232,17 @@ body:has(.ss-article) #sidebar .council-readership {
   opacity: 0.5;
 }
 
+/* Tighten the homepage lead without changing its hierarchy. */
+body:has(.ss-home) .ss-lead-story {
+  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.95fr);
+}
+
+body:has(.ss-home) .ss-lead-image img {
+  min-height: 22rem;
+  max-height: 31rem;
+}
+
 /* The floating topic drawer is mainly useful when the full topic rail isn't visible. */
 #sidebar-toggle {
   display: none !important;
@@ -203,11 +251,11 @@ body:has(.ss-article) #sidebar .council-readership {
 @media (max-width: 1199px) {
   #sidebar-toggle {
     display: block !important;
-    opacity: 0.9;
+    opacity: 0.86;
   }
 }
 
-/* Bring Micro.blog's conversation form a little closer to the publication styling. */
+/* Bring Micro.blog's conversation form closer to the publication styling. */
 .ss-article ~ form,
 .ss-article + form,
 #conversation form,
@@ -216,8 +264,24 @@ body:has(.ss-article) #sidebar .council-readership {
   border-radius: 0 !important;
 }
 
+.microblog_conversation {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.microblog_reply_textarea textarea {
+  border-radius: 0 !important;
+  border-color: rgba(127, 127, 127, 0.35) !important;
+  background: transparent !important;
+  color: inherit !important;
+}
+
 @media (max-width: 900px) {
   .ss-browse-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(.ss-home) .ss-lead-story {
     grid-template-columns: 1fr;
   }
 }
@@ -231,9 +295,24 @@ body:has(.ss-article) #sidebar .council-readership {
     grid-template-columns: 8rem minmax(0, 1fr);
   }
 
+  .ss-browse-card--text {
+    grid-template-columns: 1fr;
+  }
+
+  .ss-browse-image {
+    min-height: 10rem;
+  }
+
   .ss-archive-row {
     grid-template-columns: 4.25rem minmax(0, 1fr);
     gap: 0.85rem;
+  }
+
+  #sidebar-toggle {
+    right: 1rem !important;
+    bottom: 1rem !important;
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.78rem !important;
   }
 }
 
@@ -244,6 +323,7 @@ body:has(.ss-article) #sidebar .council-readership {
 
   .ss-browse-image {
     aspect-ratio: 16 / 9;
+    min-height: 0;
   }
 
   .ss-archive-year-heading {
