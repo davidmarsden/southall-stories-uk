@@ -14,10 +14,11 @@
 
   <section class="ss-browse-grid" aria-label="Stories in {{ .Title }}">
     {{ range $pages }}
+      {{ $page := . }}
       <article class="ss-browse-card">
         {{ with .Params.images }}
           {{ if gt (len .) 0 }}
-            <a class="ss-browse-image" href="{{ $.RelPermalink }}" aria-label="Read {{ $.Title }}">
+            <a class="ss-browse-image" href="{{ $page.RelPermalink }}" aria-label="Read {{ $page.Title }}">
               <img src="{{ index . 0 }}" alt="" loading="lazy">
             </a>
           {{ end }}
