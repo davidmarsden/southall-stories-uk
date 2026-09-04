@@ -148,6 +148,30 @@
   margin-top: 0.45rem;
 }
 
+.ss-site-credits {
+  max-width: 52rem;
+  margin: 1.25rem auto 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(127, 127, 127, 0.18);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  opacity: 0.56;
+}
+
+.ss-site-credits p {
+  margin: 0;
+}
+
+.ss-site-credits a {
+  color: inherit;
+  text-decoration-color: currentColor;
+}
+
+.ss-site-credits span {
+  display: inline-block;
+  margin: 0 0.35rem;
+}
+
 @media (max-width: 700px) {
   .ss-page-header h1 {
     font-size: clamp(2.6rem, 13vw, 4.5rem);
@@ -169,5 +193,10 @@
 
   .ss-page-footer {
     grid-template-columns: 1fr;
+  }
+
+  .ss-site-credits {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
