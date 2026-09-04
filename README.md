@@ -14,12 +14,18 @@ The initial theme source was exported from Micro.blog on 4 September 2026. The r
 
 ## Main files
 
-- `layouts/index.html` — homepage
+- `layouts/index.html` — editorial homepage
 - `layouts/_default/baseof.html` — overall page shell
+- `layouts/_default/single.html` — supporting publication pages
+- `layouts/_default/taxonomy.html` — category pages
+- `layouts/list.archivehtml.html` / `layouts/_default/list.archivehtml.html` — archive
 - `layouts/post/single.html` — article pages
 - `layouts/partials/` — masthead, navigation and supporting components
-- `static/custom.css` — Southall Stories custom overrides
-- `static/css/style.css` — theme stylesheet
+- `static/css/southall-refresh.css` — homepage/article refresh styles
+- `static/css/southall-browse.css` — archive/category styles
+- `static/css/southall-pages.css` — supporting page styles
+- `static/custom.css` — older Southall Stories overrides still in use
+- `static/css/style.css` — inherited theme stylesheet
 - `_variables-light.scss` / `_variables-dark.scss` — theme colour/type variables
 - `config.json` — exported Micro.blog/Hugo configuration snapshot
 
@@ -30,6 +36,33 @@ The initial theme source was exported from Micro.blog on 4 September 2026. The r
 3. Rebuild and check the live site.
 4. Keep GitHub and Micro.blog in sync.
 
+## 2026 redesign status
+
+The refresh is moving Southall Stories from a chronological-blog presentation toward a stronger independent local-publication identity.
+
+Completed first-pass work:
+
+- Editorial homepage with lead investigation, latest stories, reporting beats and Civic Commons feature.
+- Compact publication masthead and clearer navigation.
+- Publication-style article pages with improved typography, metadata, sharing, support and conversation routes.
+- Category pages with visual story cards.
+- Year-by-year archive with jump navigation and category links.
+- First-pass styling for supporting publication pages such as About and Read Me.
+
+## Polish backlog
+
+Keep these for later refinement rather than interrupting the structural redesign:
+
+- Fine-tune homepage left-rail spacing/alignment.
+- Revisit lead-story image/copy balance after more real-world use.
+- Consider curated/featured lead-story selection instead of always using the newest post.
+- Reduce visual noise from very long category/tag strings in archive rows.
+- Improve card rhythm where portrait/tall images create uneven category-page layouts.
+- Continue softening the article left rail on very long reads if it still feels visually dominant.
+- Continue styling the Micro.blog conversation form so it feels more native to the publication design.
+- Review mobile/tablet behaviour of the floating topic/category control.
+- Develop the fuller Southall Stories identity system later: compact mark, favicon, social card, horizontal wordmark and possible simplification/removal of the old quill motif.
+
 ## Redesign direction
 
-The 2026 refresh is intended to move Southall Stories from a chronological-blog presentation toward a stronger independent local-publication identity: lead investigations, clearer editorial sections, better archives and research routes, and a distinct but connected presentation of Ealing Civic Commons.
+Southall Stories should feel like an independent local investigative publication: lead investigations, clearer editorial sections, strong archives and research routes, accessible supporting pages, and a distinct but connected presentation of Ealing Civic Commons. The yellow, real Southall photography and slightly irreverent character should remain part of the identity rather than being polished into a generic news-site look.
