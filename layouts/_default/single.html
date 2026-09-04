@@ -7,6 +7,7 @@
       {{ else if eq .Title "Campaigns" }}Campaigns &amp; public interest
       {{ else if or (eq .Title "Search") (eq .Title "Search Space") }}Find the reporting
       {{ else if eq .Title "Subscribe" }}Stay with the story
+      {{ else if or (eq .Title "Local links & resources") (eq .Title "Local links &amp; resources") (eq .Title "Resources") }}Around Southall &amp; Ealing
       {{ else }}Southall Stories{{ end }}
     </p>
     <h1>{{ .Title }}</h1>
