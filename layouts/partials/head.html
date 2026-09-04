@@ -19,8 +19,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 
   <link rel="shortcut icon" href="https://southallstories.uk/uploads/2025/b0ede2f206.jpg" type="image/x-icon" />
@@ -55,7 +53,8 @@
 
   <link id="light" rel="stylesheet" href="{{ "css/bootstrap-light.css" | relURL }}">
   <link id="dark" rel="stylesheet" href="{{ "css/bootstrap-dark.css" | relURL }}" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
+  <link rel="stylesheet" href="{{ "css/southall-refresh.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
   <link rel="stylesheet" href="{{ "css/hamburgers.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/loader.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/photoswipe.css" | relURL }}">
@@ -67,12 +66,12 @@
     {{ partial $filename $ }}
   {{ end }}
 
-  {{ $tagline := "Digging the dirt, unearthing the truth" }}
+  {{ $tagline := "Independent local journalism from Southall and Ealing" }}
   {{ with .Site.Params.tagline }}
     {{ $tagline = . }}
   {{ end }}
 
-  {{ $siteDesc := "Investigative journalist David Marsden exposes corruption and uncovers the truth in Southall." }}
+  {{ $siteDesc := "Independent investigations, local democracy, environment, health and community reporting from Southall and across Ealing." }}
 
   {{ $pagetitle := "" }}
   {{ if .IsHome }}
