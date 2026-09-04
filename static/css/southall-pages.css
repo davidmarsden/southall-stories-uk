@@ -81,6 +81,40 @@
   border-top: 1px solid rgba(127, 127, 127, 0.28);
 }
 
+/* Search / subscribe forms rendered inside Micro.blog pages */
+.ss-page-body form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  margin: 0 0 1.5rem;
+}
+
+.ss-page-body form input[type="search"],
+.ss-page-body form input[type="text"],
+.ss-page-body form input[type="email"] {
+  flex: 1 1 18rem;
+  min-width: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(127, 127, 127, 0.45);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.ss-page-body form input[type="submit"],
+.ss-page-body form button {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #c99a0a;
+  border-radius: 0;
+  background: #f4c430;
+  color: #111;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 .ss-page-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.75fr);
@@ -122,6 +156,15 @@
   .ss-page-body {
     font-size: 1.04rem;
     line-height: 1.72;
+  }
+
+  .ss-page-body form {
+    align-items: stretch;
+  }
+
+  .ss-page-body form input[type="submit"],
+  .ss-page-body form button {
+    width: 100%;
   }
 
   .ss-page-footer {
