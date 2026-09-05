@@ -46,7 +46,9 @@
   .ss-brand-character {
     max-width: 22rem;
   }
+}
 
+@media (max-width: 520px) {
   .ss-home-hero {
     margin-bottom: 0;
     padding-bottom: 0;
