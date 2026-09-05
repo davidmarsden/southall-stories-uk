@@ -3,13 +3,8 @@
 {{ $posts := (where .Site.RegularPages.ByDate.Reverse "Type" "post") }}
 
 <main class="ss-home">
-  <header class="ss-home-hero">
-    <img class="ss-home-banner" src="https://southallstories.uk/uploads/2026/file-00000000168481f4b408e207ad4beafe.png" alt="Southall Stories — independent local journalism. Recording what happens to Southall — and who is responsible. Investigations, local democracy, environment, health, housing and community reporting from Southall and across Ealing." loading="eager">
-    <div class="ss-home-intro ss-home-intro-fallback">
-      <p class="ss-kicker">Independent local journalism · Southall &amp; Ealing</p>
-      <h1>Recording what happens to Southall — and who is responsible.</h1>
-      <p>Local people. Local questions. Investigations, local democracy, environment, health, housing and community reporting from Southall and across the London Borough of Ealing.</p>
-    </div>
+  <header class="ss-home-hero" style="margin:0 0 2.4rem;padding:0 0 2.4rem;border-bottom:1px solid rgba(127,127,127,.28);">
+    <img src="https://southallstories.uk/uploads/2026/file-00000000168481f4b408e207ad4beafe.png" alt="Southall Stories — independent local journalism. Recording what happens to Southall — and who is responsible." loading="eager" style="display:block!important;width:100%!important;max-width:none!important;height:auto!important;margin:0!important;visibility:visible!important;opacity:1!important;">
   </header>
 
   {{ if gt (len $posts) 0 }}
