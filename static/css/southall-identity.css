@@ -14,6 +14,23 @@
   opacity: 0.68;
 }
 
+.ss-home-hero {
+  margin: 0 0 2.4rem;
+  padding: 0 0 2.4rem;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.28);
+}
+
+.ss-home-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.ss-home-intro-fallback {
+  display: none;
+}
+
 .ss-home-intro > p:last-child::first-line {
   font-weight: 700;
 }
@@ -28,5 +45,19 @@
   .ss-brand-shortline,
   .ss-brand-character {
     max-width: 22rem;
+  }
+
+  .ss-home-hero {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .ss-home-banner {
+    display: none;
+  }
+
+  .ss-home-intro-fallback {
+    display: block;
   }
 }
