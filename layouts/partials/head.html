@@ -86,8 +86,7 @@
   {{ end }}
   {{ $desc = $desc | plainify | htmlUnescape | truncate 200 }}
 
-  <!-- Default branded card; articles can explicitly select a preview image using
-       an invisible <!-- preview-image: URL --> marker inserted by the GitHub publisher. -->
+  <!-- Default branded card; articles can explicitly select a preview image via a publisher marker. -->
   {{ $image := "https://southallstories.uk/uploads/2026/southall-stories-social-card-whatsapp-600x315.jpg" }}
   {{ $explicitPreview := "" }}
   {{ if not .IsHome }}
