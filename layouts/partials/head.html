@@ -86,21 +86,10 @@
   {{ end }}
   {{ $desc = $desc | plainify | htmlUnescape | truncate 200 }}
 
-  <!-- Default branded card; articles can explicitly select a preview image via a publisher marker. -->
+  <!-- Default branded card; article posts use their first discovered image when available. -->
   {{ $image := "https://southallstories.uk/uploads/2026/southall-stories-social-card-whatsapp-600x315.jpg" }}
-  {{ $explicitPreview := "" }}
-  {{ if not .IsHome }}
-    {{ $previewMarkers := findRE `<!--\s*preview-image:\s*https?://[^[:space:]]+\s*-->` .RawContent 1 }}
-    {{ if gt (len $previewMarkers) 0 }}
-      {{ $explicitPreview = replaceRE `^<!--\s*preview-image:\s*|\s*-->$` "" (index $previewMarkers 0) }}
-    {{ end }}
-  {{ end }}
-  {{ if $explicitPreview }}
-    {{ $image = $explicitPreview }}
-  {{ else }}
-    {{ with .Params.images }}
-      {{ if gt (len .) 0 }}{{ $image = (index . 0 | absURL) }}{{ end }}
-    {{ end }}
+  {{ with .Params.images }}
+    {{ if gt (len .) 0 }}{{ $image = (index . 0 | absURL) }}{{ end }}
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}">
