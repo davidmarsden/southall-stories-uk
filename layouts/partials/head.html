@@ -37,15 +37,9 @@
   {{ end }}
 
   <link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
-  {{ with .Site.Params.twitter_username }}
-    <link rel="me" href="https://twitter.com/{{ . }}" />
-  {{ end }}
-  {{ with .Site.Params.github_username }}
-    <link rel="me" href="https://github.com/{{ . }}" />
-  {{ end }}
-  {{ with .Site.Params.instagram_username }}
-    <link rel="me" href="https://instagram.com/{{ . }}" />
-  {{ end }}
+  {{ with .Site.Params.twitter_username }}<link rel="me" href="https://twitter.com/{{ . }}" />{{ end }}
+  {{ with .Site.Params.github_username }}<link rel="me" href="https://github.com/{{ . }}" />{{ end }}
+  {{ with .Site.Params.instagram_username }}<link rel="me" href="https://instagram.com/{{ . }}" />{{ end }}
 
   <link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
   <link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
@@ -65,12 +59,8 @@
   <link rel="stylesheet" href="{{ "css/loader.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/photoswipe.css" | relURL }}">
 
-  {{ range .Site.Params.plugins_css }}
-    <link rel="stylesheet" href="{{ . }}" />
-  {{ end }}
-  {{ range $filename := .Site.Params.plugins_html }}
-    {{ partial $filename $ }}
-  {{ end }}
+  {{ range .Site.Params.plugins_css }}<link rel="stylesheet" href="{{ . }}" />{{ end }}
+  {{ range $filename := .Site.Params.plugins_html }}{{ partial $filename $ }}{{ end }}
 
   {{ $tagline := "Recording what happens to Southall — and who is responsible." }}
   {{ $siteDesc := "Digging the dirt, unearthing the truth. Independent local journalism from Southall and across Ealing." }}
@@ -91,35 +81,37 @@
     {{ with .Description }}
       {{ $desc = . }}
     {{ else }}
-      {{ with .Summary }}
-        {{ $desc = . }}
-      {{ else }}
-        {{ $desc = $siteDesc }}
-      {{ end }}
+      {{ with .Summary }}{{ $desc = . }}{{ else }}{{ $desc = $siteDesc }}{{ end }}
     {{ end }}
   {{ end }}
   {{ $desc = $desc | plainify | htmlUnescape | truncate 200 }}
 
-  <!-- WhatsApp-safe branded card. Individual articles still override it with their own lead image. -->
+  <!-- Default branded card; articles can explicitly select a preview image via a publisher marker. -->
   {{ $image := "https://southallstories.uk/uploads/2026/southall-stories-social-card-whatsapp-600x315.jpg" }}
-  {{ with .Params.images }}
-    {{ if gt (len .) 0 }}
-      {{ $image = (index . 0 | absURL) }}
+  {{ $explicitPreview := "" }}
+  {{ if not .IsHome }}
+    {{ $previewMarkers := findRE `<!--\s*preview-image:\s*https?://[^[:space:]]+\s*-->` .RawContent 1 }}
+    {{ if gt (len $previewMarkers) 0 }}
+      {{ $explicitPreview = replaceRE `^<!--\s*preview-image:\s*|\s*-->$` "" (index $previewMarkers 0) }}
+    {{ end }}
+  {{ end }}
+  {{ if $explicitPreview }}
+    {{ $image = $explicitPreview }}
+  {{ else }}
+    {{ with .Params.images }}
+      {{ if gt (len .) 0 }}{{ $image = (index . 0 | absURL) }}{{ end }}
     {{ end }}
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}">
-
   <meta name="description" content="{{ $desc }}">
   <meta name="author" content="David Marsden">
-
   <meta itemprop="name" content="{{ $pagetitle }}">
   <meta itemprop="description" content="{{ $desc }}">
   <meta itemprop="image" content="{{ $image }}">
 
   {{ $ogType := "article" }}
   {{ if .IsHome }}{{ $ogType = "website" }}{{ end }}
-
   <meta property="og:site_name" content="{{ .Site.Title }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:type" content="{{ $ogType }}">
