@@ -1,5 +1,8 @@
 {{ define "main" }}
 {{ $pages := .Pages.ByDate.Reverse }}
+{{ if eq (len $pages) 0 }}
+  {{ $pages = (where .Site.RegularPages "Params.categories" "intersect" (slice .Title)).ByDate.Reverse }}
+{{ end }}
 <main class="ss-browse ss-taxonomy">
   <header class="ss-browse-header">
     <p class="ss-section-label">Browse the reporting</p>
