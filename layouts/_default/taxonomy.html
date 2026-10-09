@@ -1,7 +1,18 @@
 {{ define "main" }}
 {{ $pages := .Pages.ByDate.Reverse }}
 {{ if eq (len $pages) 0 }}
-  {{ $pages = (where .Site.RegularPages "Params.categories" "intersect" (slice .Title)).ByDate.Reverse }}
+  {{ $needle := lower .Title }}
+  {{ $matches := newScratch }}
+  {{ $matches.Set "pages" (slice) }}
+  {{ range .Site.RegularPages }}
+    {{ $page := . }}
+    {{ range .Params.categories }}
+      {{ if eq (lower .) $needle }}
+        {{ $matches.Add "pages" (slice $page) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $pages = sort ($matches.Get "pages") "Date" "desc" }}
 {{ end }}
 <main class="ss-browse ss-taxonomy">
   <header class="ss-browse-header">
