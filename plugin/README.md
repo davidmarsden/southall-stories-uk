@@ -1,29 +1,25 @@
-# Southall Stories overrides — staging package
+# Southall Stories overrides — integration candidate
 
-**Not installed.** This folder is a candidate Micro.blog plugin, not a replacement for the Microwave theme. Keep the live custom theme unchanged until preview verification.
+This directory is the **plugin package root** (its `plugin.json` belongs at the root of an installed plugin, not in the parent repository root). It is not yet installed or validated on Micro.blog.
 
-## Base and ownership
+## Ownership and dependencies
 
-- **Microwave** remains the base theme and owns inherited layouts, Bootstrap, standard scripts and Sass compilation.
-- **Southall Stories** owns editorial templates, masthead/navigation, four dedicated stylesheets and the tested hamburger script.
-- **Micro.blog** owns content, site settings, uploads and generated config.
-- **Other plugins** own Search Space, SocialSpec, Collections, conversations and reply-by-email components.
+Microwave remains the base theme. This plugin owns the customised editorial layouts (`index.html`, `post/single.html`, `_default/single.html`, `_default/taxonomy.html`, archive layouts), the overall `baseof.html`, Southall `head.html`, mobile navigation, supporting partials, branding stylesheets, and legacy `style.css` / `custom.css` retained for visual fidelity. `_variables-light.scss` preserves the original light-mode Sass configuration. `search.js` and standard Microwave assets are expected to come from the installed base theme unless explicitly overridden.
 
-## Staged files
+The Southall `head.html` already links the four Southall stylesheets. Therefore the manifest has `includes: []` to avoid duplicate CSS requests. The Southall `baseof.html` references `js/hamburger.js`, and the paired mobile-nav partial is packaged alongside it.
 
-The four dedicated CSS files and paired mobile navigation HTML/JS are copied from the repository's known source. The existing custom theme remains authoritative until plugin installation is tested. The manifest's `includes` only lists the four dedicated stylesheets; the mobile nav script is loaded by the existing base template, and must be checked on a preview with the plugin enabled.
+**Excluded:** site `config.json`, generated content, Micro.blog account data, SocialSpec, Search Space, Collections and other independently managed plugin files.
 
-## Blockers before enabling
+## Dependencies still to verify before installing
 
-1. Compare against pristine upstream Microwave, not only the davidmarsden-test export.
-2. Decide whether the site's customised `baseof.html`, `head.html`, homepage, articles, archives and taxonomy layouts should be included as exact overrides. The staging package intentionally does **not** override them yet.
-3. Extract Southall-only changes from `static/css/style.css` and `static/custom.css`, preserve light/dark palette, and check CSS load order.
-4. Confirm Micro.blog resolves the plugin's `layouts/partials/mobile-nav.html` and `static/js/hamburger.js` as expected.
-5. Compare mobile and desktop pages, archive, search, metadata, and both colour schemes before cutover.
-6. Remove duplicate custom-theme files only **after** passing preview tests and documenting rollback.
+1. Confirm the installed Microwave version and exact upstream layout/asset resolution, including inherited `sidebar`, `sidemeta`, `social-icons`, standard JavaScript and Bootstrap styles.
+2. Confirm Micro.blog accepts an installed plugin with `baseof.html` and `head.html` overrides while keeping Microwave as the base theme.
+3. Check whether the plugin's light-mode Sass variable override compiles as expected; if not, move the palette into explicit CSS.
+4. Compare `style.css` and `custom.css` with pristine upstream Microwave and reduce duplicated inherited code after visual parity is established.
+5. Verify homepage, articles, categories, archive, search, social previews, navigation, colour schemes and third-party plugin integrations on a test site.
 
-## Rollback
+## Deployment / rollback
 
-Disable the plugin and rebuild the existing custom theme. Do not delete any live theme overrides during staging.
+Install the contents of **this directory** as a Micro.blog plugin on a test site first. Do not install the repository root as a plugin. Keep the existing custom theme and export intact. On failure, disable the plugin, restore the original theme configuration and rebuild.
 
-See [asset inventory](../docs/asset-comparison.md) and [migration checklist](../docs/overrides-migration.md).
+See `../docs/asset-comparison.md` and `../docs/overrides-migration.md`.
