@@ -1,11 +1,6 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "Southall Stories overrides",
-  "description": "Selective presentation overrides for Southall Stories on the Microwave base theme.",
-  "includes": [
-    "/css/southall-refresh.css",
-    "/css/southall-browse.css",
-    "/css/southall-pages.css",
-    "/css/southall-identity.css"
-  ]
+  "description": "Southall-specific templates and assets layered on the Microwave base theme.",
+  "includes": []
 }
